@@ -14,7 +14,6 @@ public:
     bool isFull();
     void push(int x);
     int pop();
-    int peek();
     int size();
 };
 
@@ -23,7 +22,7 @@ Stack::Stack(){
 }
 
 bool Stack::isEmpty(){
-    return top == -1;
+    return top == - 1;
 }
 
 bool Stack::isFull(){
@@ -31,7 +30,7 @@ bool Stack::isFull(){
 }
 
 void Stack::push(int x){
-    if(this->isFull()){
+    if(isFull()){
         cout << "Stack OverFlow\n";
         return;
     }
@@ -39,7 +38,7 @@ void Stack::push(int x){
 }
 
 int Stack::pop(){
-    if(this->isEmpty()){
+    if(isEmpty()){
         cout << "Stack UnderFlow\n";
         return -1;
     }
@@ -48,26 +47,16 @@ int Stack::pop(){
     }
 }
 
-int Stack::peek(){
-    if(this->isEmpty()){
+int Stack::size(){
+    if(isEmpty()){
         cout << "Stack is Empty\n";
         return -1;
     }
-    else arr[top];
-}
-
-int Stack::size(){
-    return top + 1;
+    else return arr[top];
 }
 
 int main(){
     Stack s;
     s.push(2);
-    s.push(3);
-    s.push(4);
-    cout << s.peek() << endl;
-    cout << s.size() << endl;
-    cout << s.pop() << endl;
-    cout << s.pop() << endl;
-    cout << s.peek() << endl;
+    cout << s.isEmpty() << endl;
 }
