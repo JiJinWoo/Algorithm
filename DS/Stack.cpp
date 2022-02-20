@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-const int MAX = 1000;
+const int MAX = 100;
 
 class Stack{
 private:
@@ -12,7 +12,7 @@ public:
     Stack();
     bool isEmpty();
     bool isFull();
-    void push(int x);
+    void push(int x);   
     int pop();
     int peek();
     int size();
@@ -35,7 +35,7 @@ void Stack::push(int x){
         cout << "Stack OverFlow\n";
         return;
     }
-    else arr[++top] = x;
+    arr[++top] = x;
 }
 
 int Stack::pop(){
@@ -43,9 +43,7 @@ int Stack::pop(){
         cout << "Stack UnderFlow\n";
         return -1;
     }
-    else{
-        return arr[--top];
-    }
+    return arr[top--];
 }
 
 int Stack::peek(){
@@ -53,7 +51,7 @@ int Stack::peek(){
         cout << "Stack is Empty\n";
         return -1;
     }
-    else arr[top];
+    arr[top];
 }
 
 int Stack::size(){
@@ -62,12 +60,12 @@ int Stack::size(){
 
 int main(){
     Stack s;
+    s.pop();
     s.push(2);
     s.push(3);
     s.push(4);
+    s.pop(); 
     cout << s.peek() << endl;
     cout << s.size() << endl;
-    cout << s.pop() << endl;
-    cout << s.pop() << endl;
     cout << s.peek() << endl;
 }
