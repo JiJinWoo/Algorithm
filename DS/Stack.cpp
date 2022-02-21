@@ -51,7 +51,7 @@ int Stack::peek(){
         cout << "Stack is Empty\n";
         return -1;
     }
-    arr[top];
+    return arr[top];
 }
 
 int Stack::size(){
@@ -60,12 +60,10 @@ int Stack::size(){
 
 int main(){
     Stack s;
-    s.pop();
     s.push(2);
     s.push(3);
     s.push(4);
     s.pop(); 
-    cout << s.peek() << endl;
-    cout << s.size() << endl;
-    cout << s.peek() << endl;
+    cout << "peek : " << s.peek() << endl;
+    cout << "size : " << s.size() << endl;
 }
