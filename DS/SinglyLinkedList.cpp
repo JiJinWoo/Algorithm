@@ -14,13 +14,9 @@ private:
 
 public:
     LinkedList();
-
-    //LinkedList 맨 앞에 node 추가
-    void addFrontNode(int n);
-    //LinkedList 맨 뒤에 node 추가
-    void addNode(int n);
-    //LinkedList 중간에 node 추가     
-    void insertNode(node* prevNode, int n); 
+    void addFrontNode(int n);   //LinkedList 맨 앞에 node 추가
+    void addNode(int n);    //LinkedList 맨 뒤에 node 추가
+    void insertNode(node* prevNode, int n); //LinkedList 중간에 node 추가 
     void deleteNode(node* prevNode);    //node 삭제
     void display(node* head);   //data 출력
     node* getHead(){    //첫번째 node 가져오기
