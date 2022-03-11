@@ -14,17 +14,16 @@ private:
 
 public:
     LinkedList();
+
+    //LinkedList 맨 앞에 node 추가
     void addFrontNode(int n);
-
+    //LinkedList 맨 뒤에 node 추가
     void addNode(int n);
-
-    void insertNode(node* prevNode, int n);
-
-    void deleteNode(node* prevNode);
-
-    void display(node* head);
-
-    node* getHead(){
+    //LinkedList 중간에 node 추가     
+    void insertNode(node* prevNode, int n); 
+    void deleteNode(node* prevNode);    //node 삭제
+    void display(node* head);   //data 출력
+    node* getHead(){    //첫번째 node 가져오기
         return head;
     }
 };
@@ -82,10 +81,10 @@ void LinkedList::deleteNode(node* prev){
 
 void LinkedList::display(node* head){
     if(head == NULL){
-        cout << "LinkedList\n";
+        cout << "\n";
     }
     else{
-        cout << head->data << endl;
+        cout << head->data << " ";
         display(head->next);
     }
 }
@@ -100,7 +99,7 @@ int main(){
 
     l.addFrontNode(76);
 
-    l.insertNode(l.getHead()->next->next, 2);
+    l.insertNode(l.getHead()->next->next, 19);
 
     l.display(l.getHead());
 
