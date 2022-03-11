@@ -9,8 +9,8 @@ int linearSearch(int arr[], int len, int target){
 }
 
 int main(){
-    int arr[] = {3, 5, 2, 4, 9};
-    int index = linearSearch(arr, sizeof(arr) / sizeof(int), 4);
+    int arr[] = {2, 5, 8, 7, 9};
+    int index = linearSearch(arr, sizeof(arr) / sizeof(int), 8);
     if(index == -1) cout << "false\n";
     else cout << index << endl;
 }
