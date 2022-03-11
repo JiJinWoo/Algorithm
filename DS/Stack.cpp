@@ -15,7 +15,7 @@ public:
     void push(int x);   
     int pop();
     int peek();
-    int size();
+    int count();
 };
 
 Stack::Stack(){
@@ -54,7 +54,7 @@ int Stack::peek(){
     return arr[top];
 }
 
-int Stack::size(){
+int Stack::count(){
     return top + 1;
 }
 
@@ -65,5 +65,5 @@ int main(){
     s.push(4);
     s.pop(); 
     cout << "peek : " << s.peek() << endl;
-    cout << "size : " << s.size() << endl;
+    cout << "size : " << s.count() << endl;
 }
