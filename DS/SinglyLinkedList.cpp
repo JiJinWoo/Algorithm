@@ -25,6 +25,7 @@ public:
 };
 
 LinkedList::LinkedList(){
+    //head, tail 초기화
     head = NULL;
     tail = NULL;
 }
@@ -36,7 +37,7 @@ void LinkedList::addFrontNode(int n){
     if(head == NULL){   //LinkList가 비어있다면
         head = temp;    //head에 temp 저장
         tail = temp;    //tail에 temp 저장
-}
+    }   
     else{   //LinkedList에 데이터가 있다면 
         temp->next = head;  //다음 node를 가리키는 주소를 원래 있던 head로 변경
         head = temp;    //맨 앞에 새로운 데이터가 들어왔으니 temp를 head로 변경
@@ -46,7 +47,6 @@ void LinkedList::addFrontNode(int n){
 void LinkedList::addNode(int n){
     node* temp = new node;
     temp->data = n;
-
     temp->next = NULL;
 
     if(head == NULL){
@@ -69,7 +69,6 @@ void LinkedList::insertNode(node* prev, int n){
 
 void LinkedList::deleteNode(node* prev){
     node* temp = prev->next;    //이전의 node를 temp에 저장
-
     prev->next = temp->next;    //temp에 저장된 node를 이전 node에 저장
 
     delete temp;
